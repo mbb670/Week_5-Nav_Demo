@@ -2,7 +2,7 @@
     Navigation
 ============= */
 nav {
-    background-color: $black;
+    background-color: $accent;
     padding: 10px;
     @include lg {
         background-color: $white;
@@ -30,6 +30,22 @@ nav {
                 @include lg {
                     color: $black;
                 }
+
+                a:active,
+                a:hover {
+                    color: $black;
+                    border-bottom: 1px solid $black;
+                    @include lg {
+                        color: $accent;
+                        border-bottom: 1px solid $accent;
+                    }
+                }
+            }
+        }
+        li:last-child{
+            display: none;
+            @include lg{
+                display: block !important;
             }
         }
     }

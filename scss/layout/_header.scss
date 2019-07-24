@@ -9,10 +9,16 @@ header {
         grid-template-areas: "logo nav";
         grid-template-columns: 30% auto;
     }
+
     // logo container
     section:nth-child(1) {
         grid-area: logo;
         padding: 10px;
+        h1{
+            span{
+                color:$accent;
+            }
+        }
     }
     // burger container
     section:nth-child(2) {
@@ -23,6 +29,13 @@ header {
         padding: 10px;
         @include lg {
             display: none;
+        }
+
+        a{
+            padding-right: 5px;
+            i{
+                color: $black;
+            }
         }
 
         button {

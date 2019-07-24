@@ -1,0 +1,42 @@
+/* =============
+    About
+============= */
+#about {
+    div {
+        section:nth-child(1) {
+            text-align: center;
+            h3 {
+                font-weight: 300;
+            }
+
+            h2 {
+                margin-top: 5px;
+                color: $accent;
+                font-size: rem-calc(26)
+            }
+        }
+
+        section:nth-child(2) {
+            article {
+                margin-top: 30px;
+
+                h4 {
+                    color: $accent;
+                    font-weight: 500;
+                    font-size: rem-calc(20);
+
+                    img {
+                        height: rem-calc(30);
+                        vertical-align: middle;
+                        margin-right: 12px;
+                    }
+                }
+
+                p {
+                    font-weight: 300;
+                    line-height: rem-calc(30);
+                }
+            }
+        }
+    }
+}

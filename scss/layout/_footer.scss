@@ -1,3 +1,30 @@
 /* =============
     Footer
 ============= */
+footer {
+    background-color: $accent;
+    padding: 20px;
+
+    h3 {
+        a {
+            color: $white;
+        }
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        li {
+            margin-right: 15px;
+
+            a {
+                i {
+                    color: $black;
+                }
+            }
+        }
+    }
+}

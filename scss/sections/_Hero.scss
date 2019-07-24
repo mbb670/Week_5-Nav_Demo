@@ -1,0 +1,26 @@
+/* =============
+    Hero
+============= */
+#hero {
+    background-image: url("../img/hero/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+
+    div {
+        text-align: center;
+        padding-top: 200px;
+        h3 {
+            color: $accent;
+            font-size: rem-calc(18);
+            font-weight: 500;
+
+        }
+
+        h2 {
+            color: $white;
+            font-size: rem-calc(38);
+            font-weight: bold;
+        }
+    }
+}
