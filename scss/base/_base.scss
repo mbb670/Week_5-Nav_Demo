@@ -1,0 +1,28 @@
+/* =============
+    Base
+============= */
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-areas: ". content .";
+    grid-template-columns: 2% auto 2%;
+    padding: 50px 0;
+
+    > div {
+        grid-area: content;
+    }
+}
