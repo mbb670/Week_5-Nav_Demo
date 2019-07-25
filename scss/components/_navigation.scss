@@ -17,6 +17,8 @@ nav {
             justify-content: flex-end;
         }
 
+
+
         li {
             margin-bottom: 15px;
             @include lg {
@@ -27,26 +29,33 @@ nav {
             a:link,
             a:visited {
                 color: $white;
+                display: inline-block;
+                border-bottom: 1px solid $accent;
+
                 @include lg {
                     color: $black;
+                    border-bottom: none;
                 }
-
-                a:active,
-                a:hover {
-                    color: $black;
-                    border-bottom: 1px solid $black;
-                    @include lg {
-                        color: $accent;
-                        border-bottom: 1px solid $accent;
-                    }
+            }
+            a:active,
+            a:hover  {
+                border-bottom: 1px solid $white;
+                @include lg {
+                    color: $accent;
+                    border-bottom: 1px solid $accent;
                 }
             }
         }
-        li:last-child{
+
+        li:last-child {
             display: none;
-            @include lg{
+            @include lg {
                 display: block !important;
             }
+        }
+
+        li:nth-last-child(2) {
+            margin-bottom: 0;
         }
     }
 }

@@ -3,24 +3,67 @@
 ============= */
 #hero {
     background-image: url("../img/hero/hero.jpg");
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     height: 300px;
+    margin-top: 50px;
+    @include sm {
+        height: 400px;
+    }
+    @include md {
+        height: 550px;
+    }
+    @include lg {
+        height: 700px;
+    }
+    @include xl {
+        height: 800px;
+    }
 
     div {
-        text-align: center;
         padding-top: 200px;
+        text-align: center;
+        @include sm {
+            padding-top: 240px;
+        }
+        @include md {
+            padding-top: 380px;
+        }
+        @include lg {
+            padding-top: 480px;
+        }
+        @include xl {
+            padding-top: 550px;
+        }
+
         h3 {
             color: $accent;
             font-size: rem-calc(18);
             font-weight: 500;
-
+            @include sm {
+                font-size: rem-calc(22);
+            }
+            @include md {
+                font-size: rem-calc(26);
+            }
+            @include lg {
+                font-size: rem-calc(38);
+            }
         }
 
         h2 {
             color: $white;
             font-size: rem-calc(38);
             font-weight: bold;
+            @include sm {
+                font-size: rem-calc(42);
+            }
+            @include md {
+                font-size: rem-calc(52);
+            }
+            @include lg {
+                font-size: rem-calc(82);
+            }
         }
     }
 }

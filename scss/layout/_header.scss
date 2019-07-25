@@ -5,12 +5,16 @@ header {
     display: grid;
     grid-template-areas: "logo burger" "nav nav";
     grid-template-columns: 70% auto;
+    position: fixed;
+    width: 100%;
+    background-color: $white;
+    top:0;
     @include lg {
         grid-template-areas: "logo nav";
         grid-template-columns: 30% auto;
     }
 
-    // logo container
+    // logo
     section:nth-child(1) {
         grid-area: logo;
         padding: 10px;
@@ -20,19 +24,21 @@ header {
             }
         }
     }
-    // burger container
+    // burger
     section:nth-child(2) {
         align-items: center;
         display: flex;
         grid-area: burger;
         justify-content: flex-end;
         padding: 10px;
+
         @include lg {
             display: none;
         }
 
         a{
             padding-right: 5px;
+
             i{
                 color: $black;
             }

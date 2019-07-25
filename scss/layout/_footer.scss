@@ -4,12 +4,27 @@
 footer {
     background-color: $accent;
     padding: 20px;
-
+    text-align: center;
+    @include sm{
+        font-size: rem-calc(20);
+    }
+    @include md{
+        font-size: rem-calc(22);
+    }
+    @include lg{
+        font-size: rem-calc(24);
+    }
+    
     h3 {
-        a {
+        a:link,
+        a:visited{
             color: $white;
         }
-        text-align: center;
+        a:hover,
+        a:active{
+            border-bottom: 1px solid $white;
+
+        }
     }
 
     ul {
@@ -20,7 +35,8 @@ footer {
         li {
             margin-right: 15px;
 
-            a {
+            a:link,
+            a:visited {
                 i {
                     color: $black;
                 }
