@@ -5,25 +5,25 @@ footer {
     background-color: $accent;
     padding: 20px;
     text-align: center;
-    @include sm{
+    @include sm {
         font-size: rem-calc(20);
     }
-    @include md{
+    @include md {
         font-size: rem-calc(22);
     }
-    @include lg{
+    @include lg {
         font-size: rem-calc(24);
     }
-    
+
     h3 {
         a:link,
-        a:visited{
+        a:visited {
             color: $white;
         }
-        a:hover,
-        a:active{
-            border-bottom: 1px solid $white;
 
+        a:active,
+        a:hover {
+            border-bottom: 2px solid $white;
         }
     }
 

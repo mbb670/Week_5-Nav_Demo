@@ -16,16 +16,14 @@ a:visited {
     transition: 0.25s;
 }
 
-a:hover,
-a:active {
-
-}
-
 .grid-content {
     display: grid;
     grid-template-areas: ". content .";
     grid-template-columns: 6% auto 6%;
     padding: 50px 0;
+    @include xl {
+        grid-template-columns: auto 1400px auto;
+    }
 
     > div {
         grid-area: content;

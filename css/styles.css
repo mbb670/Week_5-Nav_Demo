@@ -327,6 +327,9 @@ a:visited {
   grid-template-areas: ". content .";
   grid-template-columns: 6% auto 6%;
   padding: 50px 0; }
+  @media (min-width: 1200px) {
+    .grid-content {
+      grid-template-columns: auto 1400px auto; } }
   .grid-content > div {
     grid-area: content; }
 
@@ -383,22 +386,21 @@ nav {
           margin-left: 20px; } }
       nav ul li a:link,
       nav ul li a:visited {
+        border-bottom: 1px solid #01C2D3;
         color: #fff;
-        display: inline-block;
-        border-bottom: 1px solid #01C2D3; }
+        display: inline-block; }
         @media (min-width: 900px) {
           nav ul li a:link,
           nav ul li a:visited {
-            color: #000;
-            border-bottom: none; } }
+            border-bottom: none;
+            color: #000; } }
       nav ul li a:active,
       nav ul li a:hover {
         border-bottom: 1px solid #fff; }
         @media (min-width: 900px) {
           nav ul li a:active,
           nav ul li a:hover {
-            color: #01C2D3;
-            border-bottom: 1px solid #01C2D3; } }
+            border-bottom: 2px solid #01C2D3; } }
     nav ul li:last-child {
       display: none; }
       @media (min-width: 900px) {
@@ -411,28 +413,34 @@ nav {
     Header
 ============= */
 header {
+  background-color: #fff;
   display: grid;
   grid-template-areas: "logo burger" "nav nav";
   grid-template-columns: 70% auto;
   position: fixed;
-  width: 100%;
-  background-color: #fff;
-  top: 0; }
+  top: 0;
+  width: 100%; }
   @media (min-width: 900px) {
     header {
       grid-template-areas: "logo nav";
       grid-template-columns: 30% auto; } }
   header section:nth-child(1) {
     grid-area: logo;
-    padding: 10px; }
+    padding: 15px; }
     header section:nth-child(1) h1 span {
       color: #01C2D3; }
+    @media (min-width: 900px) {
+      header section:nth-child(1) h1 {
+        font-size: 2.25rem; } }
   header section:nth-child(2) {
     align-items: center;
     display: flex;
     grid-area: burger;
     justify-content: flex-end;
     padding: 10px; }
+    @media (min-width: 500px) {
+      header section:nth-child(2) {
+        font-size: 1.125rem; } }
     @media (min-width: 900px) {
       header section:nth-child(2) {
         display: none; } }
@@ -449,7 +457,9 @@ header {
     grid-area: nav; }
     @media (min-width: 900px) {
       header nav {
-        display: block !important; } }
+        display: block !important;
+        font-size: 1.125rem;
+        margin-right: 15px; } }
 
 /* =============
     Footer
@@ -470,9 +480,9 @@ footer {
   footer h3 a:link,
   footer h3 a:visited {
     color: #fff; }
-  footer h3 a:hover,
-  footer h3 a:active {
-    border-bottom: 1px solid #fff; }
+  footer h3 a:active,
+  footer h3 a:hover {
+    border-bottom: 2px solid #fff; }
   footer ul {
     display: flex;
     justify-content: center;
@@ -491,7 +501,7 @@ footer {
   background-position: center;
   background-size: cover;
   height: 300px;
-  margin-top: 50px; }
+  margin-top: 70px; }
   @media (min-width: 500px) {
     #hero {
       height: 400px; } }
@@ -552,8 +562,8 @@ footer {
 @media (min-width: 1200px) {
   #about div {
     display: grid;
-    grid-template-columns: 50% 40%;
     grid-gap: 5%;
+    grid-template-columns: 50% 40%;
     margin-bottom: 20px; } }
 
 #about div section:nth-child(1) {
@@ -576,9 +586,9 @@ footer {
       #about div section:nth-child(1) h3 {
         font-size: 2.5rem; } }
   #about div section:nth-child(1) h2 {
-    margin-top: 8px;
     color: #01C2D3;
-    font-size: 1.625rem; }
+    font-size: 1.625rem;
+    margin-top: 8px; }
     @media (min-width: 500px) {
       #about div section:nth-child(1) h2 {
         font-size: 2.25rem; } }
@@ -598,22 +608,22 @@ footer {
 
 @media (min-width: 900px) {
   #about div section:nth-child(2) {
-    padding: 0 0;
     display: grid;
     grid-template-areas: ". left . right .";
-    grid-template-columns: auto 5fr 1fr 5fr auto; } }
+    grid-template-columns: auto 5fr 1fr 5fr auto;
+    padding: 0; } }
 
 @media (min-width: 1200px) {
   #about div section:nth-child(2) {
-    grid-template-columns: auto;
-    grid-template-areas: "left" "right"; } }
+    grid-template-areas: "left" "right";
+    grid-template-columns: auto; } }
 
 #about div section:nth-child(2) article {
   margin-top: 30px; }
   #about div section:nth-child(2) article h4 {
     color: #01C2D3;
-    font-weight: 500;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    font-weight: 500; }
     @media (min-width: 500px) {
       #about div section:nth-child(2) article h4 {
         font-size: 1.375rem; } }
@@ -626,9 +636,9 @@ footer {
     #about div section:nth-child(2) article h4::before {
       content: url("../img/about/light.jpg");
       display: inline-block;
-      vertical-align: middle;
+      margin-right: 5px;
       transform: scale(0.6);
-      margin-right: 5px; }
+      vertical-align: middle; }
       @media (min-width: 500px) {
         #about div section:nth-child(2) article h4::before {
           transform: scale(0.65); } }
@@ -637,8 +647,8 @@ footer {
           transform: scale(0.7); } }
       @media (min-width: 1200px) {
         #about div section:nth-child(2) article h4::before {
-          transform: scale(0.8);
-          margin-right: 10px; } }
+          margin-right: 10px;
+          transform: scale(0.8); } }
   #about div section:nth-child(2) article p {
     font-weight: 300;
     line-height: 1.875rem; }

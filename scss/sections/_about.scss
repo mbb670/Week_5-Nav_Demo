@@ -3,118 +3,118 @@
 ============= */
 #about {
     div {
-        @include xl{
+        @include xl {
             display: grid;
-            grid-template-columns: 50% 40%;
             grid-gap: 5%;
+            grid-template-columns: 50% 40%;
             margin-bottom: 20px;
         }
+
         section:nth-child(1) {
             text-align: center;
-            @include xl{
-                margin-top:160px
+            @include xl {
+                margin-top: 160px;
             }
 
             h3 {
                 font-weight: 300;
-                @include sm{
+                @include sm {
                     font-size: rem-calc(26);
                 }
-                @include md{
+                @include md {
                     font-size: rem-calc(30);
                 }
-
-                @include lg{
+                @include lg {
                     font-size: rem-calc(36);
                 }
-                @include xl{
+                @include xl {
                     font-size: rem-calc(40);
                 }
             }
 
             h2 {
-                margin-top: 8px;
                 color: $accent;
                 font-size: rem-calc(26);
-                @include sm{
+                margin-top: 8px;
+                @include sm {
                     font-size: rem-calc(36);
                 }
-                @include md{
+                @include md {
                     font-size: rem-calc(46);
                 }
-                @include lg{
+                @include lg {
                     font-size: rem-calc(56);
                 }
-                @include xl{
+                @include xl {
                     font-size: rem-calc(66);
                 }
             }
         }
 
         section:nth-child(2) {
-            @include md{
+            @include md {
                 padding: 0 70px;
             }
-            @include lg{
-                padding: 0 0;
+            @include lg {
                 display: grid;
                 grid-template-areas: ". left . right .";
                 grid-template-columns: auto 5fr 1fr 5fr auto;
+                padding: 0;
             }
-            @include xl{
-                grid-template-columns: auto;
+            @include xl {
                 grid-template-areas: "left" "right";
+                grid-template-columns: auto;
             }
+
             article {
                 margin-top: 30px;
 
                 h4 {
                     color: $accent;
-                    font-weight: 500;
                     font-size: rem-calc(20);
-                    @include sm{
-                    font-size: rem-calc(22);
+                    font-weight: 500;
+                    @include sm {
+                        font-size: rem-calc(22);
                     }
-                    @include md{
-                    font-size: rem-calc(26);
+                    @include md {
+                        font-size: rem-calc(26);
                     }
-                    @include xl{
-                    font-size: rem-calc(30);
+                    @include xl {
+                        font-size: rem-calc(30);
                     }
 
                     &::before {
                         content: url("../img/about/light.jpg");
                         display: inline-block;
-                        vertical-align: middle;
-                        transform: scale(.6);
                         margin-right: 5px;
-                        @include sm{
-                        transform: scale(.65);
+                        transform: scale(.6);
+                        vertical-align: middle;
+                        @include sm {
+                            transform: scale(.65);
                         }
-                        @include md{
-                        transform: scale(.7);
+                        @include md {
+                            transform: scale(.7);
                         }
-                        @include xl{
-                        transform: scale(.8);
-                        margin-right: 10px;
+                        @include xl {
+                            margin-right: 10px;
+                            transform: scale(.8);
                         }
                     }
-
                 }
 
                 p {
                     font-weight: 300;
                     line-height: rem-calc(30);
-                    @include sm{
-                    font-size: rem-calc(18);
+                    @include sm {
+                        font-size: rem-calc(18);
                     }
-                    @include md{
-                    font-size: rem-calc(20);
-                    line-height: rem-calc(36);
+                    @include md {
+                        font-size: rem-calc(20);
+                        line-height: rem-calc(36);
                     }
-                    @include xl{
-                    font-size: rem-calc(24);
-                    line-height: rem-calc(42);
+                    @include xl {
+                        font-size: rem-calc(24);
+                        line-height: rem-calc(42);
                     }
                 }
             }
@@ -125,6 +125,7 @@
 
             article:nth-child(2) {
                 grid-area: right;
+
                 h4 {
                     &::before {
                         content: url("../img/about/chart.jpg");

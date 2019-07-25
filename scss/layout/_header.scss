@@ -2,25 +2,28 @@
     Header
 ============= */
 header {
+    background-color: $white;
     display: grid;
     grid-template-areas: "logo burger" "nav nav";
     grid-template-columns: 70% auto;
     position: fixed;
+    top: 0;
     width: 100%;
-    background-color: $white;
-    top:0;
     @include lg {
         grid-template-areas: "logo nav";
         grid-template-columns: 30% auto;
     }
-
     // logo
     section:nth-child(1) {
         grid-area: logo;
-        padding: 10px;
-        h1{
-            span{
-                color:$accent;
+        padding: 15px;
+
+        h1 {
+            span {
+                color: $accent;
+            }
+            @include lg {
+                font-size: rem-calc(36);
             }
         }
     }
@@ -31,15 +34,17 @@ header {
         grid-area: burger;
         justify-content: flex-end;
         padding: 10px;
-
+        @include sm {
+            font-size: rem-calc(18);
+        }
         @include lg {
             display: none;
         }
 
-        a{
+        a {
             padding-right: 5px;
 
-            i{
+            i {
                 color: $black;
             }
         }
@@ -56,6 +61,8 @@ header {
         grid-area: nav;
         @include lg {
             display: block !important;
+            font-size: rem-calc(18);
+            margin-right: 15px;
         }
     }
 }

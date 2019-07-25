@@ -17,8 +17,6 @@ nav {
             justify-content: flex-end;
         }
 
-
-
         li {
             margin-bottom: 15px;
             @include lg {
@@ -28,21 +26,20 @@ nav {
 
             a:link,
             a:visited {
+                border-bottom: 1px solid $accent;
                 color: $white;
                 display: inline-block;
-                border-bottom: 1px solid $accent;
-
                 @include lg {
-                    color: $black;
                     border-bottom: none;
+                    color: $black;
                 }
             }
+
             a:active,
-            a:hover  {
+            a:hover {
                 border-bottom: 1px solid $white;
                 @include lg {
-                    color: $accent;
-                    border-bottom: 1px solid $accent;
+                    border-bottom: 2px solid $accent;
                 }
             }
         }
